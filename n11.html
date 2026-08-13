@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lokendra — Frontend Developer's Notebook</title>
+<meta name="description" content="Portfolio of Lokendra, BCA student and aspiring frontend developer — kept as chapters in a notebook." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="n22.css" />
+</head>
+<body>
+    <div class="reading-progress">
+    <div class="reading-progress-bar" id="progressBar"></div>
+</div>
+<main class="wrap">
+  <nav class="tabs" id="tabs" aria-label="Chapters"></nav>
+
+  <div class="stage">
+    <article class="page" id="page">
+      <div class="bookmark" id="bookmark">
+        <span id="bookmarkText">
+            Reading
+        </span>
+      </div>
+      <div class="sheet" id="sheet"></div>
+      <footer class="foot">
+        <p class="footnote" id="footnote"></p>
+        <div class="footmeta">
+          <span>Lokendra · Notebook</span>
+          <span id="pagecount"></span>
+          
+        </div>
+      </footer>
+    </article>
+  </div>
+
+  <div class="controls" id="controls">
+    <button id="prev">← previous</button>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+    <button id="next">turn page →</button>
+  </div>
+</main>
+
+<!-- ================= COVER PAGE CONTENT ================= -->
+<template id="tpl-pages">
+
+  <section data-tab="Cover" data-footnote="First edition — kept by hand, printed in the browser.">
+    <div class="cover">
+      <p class="typing"></p>
+      <p class="kicker">my name is</p>
+      <h1>Lokendra<span>Notes of a Frontend Developer</span></h1>
+      <div class="author-card">
+    <div class="photo">
+        <img src="C:\Users\loken\OneDrive\Documents\Pictures\Nezuko Kamado.jpg" alt="Lokendra">
+    </div>
+
+    <div class="author-info">
+        <p>Frontend Developer</p>
+        <p>BCA Student</p>
+        <p>Rajasthan, India</p>
+    </div>
+</div>
+      <p class="lede">I'm a <mark>BCA student</mark> and aspiring frontend developer. I enjoy
+        building responsive websites, creating modern user interfaces and learning new technologies.</p>
+      <p class="hand">press → or use the buttons below to turn the page</p>
+      <dl class="stats">
+        <div><dt>Projects</dt><dd>04+</dd></div>
+        <div><dt>Technologies</dt><dd>04+</dd></div>
+        <div><dt>Edition</dt><dd>2026</dd></div>
+      </dl>
+    </div>
+  </section>
+  
+<!-- ================= FOOT NOTE ================= -->
+
+  <section data-tab="01 · About" data-footnote="¹ Started with plain HTML in a text editor. The editor changed; the habit stayed.">
+    <header class="ch"><p class="ch-no">Chapter 01</p><h2>About the Author</h2><p class="ch-sub">an introduction, mostly honest</p></header>
+    <div class="prose">
+      <p>I'm Lokendra — a BCA student learning to build for the web. Most of my time goes into
+        responsive layouts, clean interfaces and small projects that teach me something new.¹</p>
+      <p>I like work that sits between structure and craft: readable markup, considered CSS and
+        JavaScript that stays understandable a month later.</p>
+    </div>
+    <pre class="note"><code><span class="c">/* how-i-work */</span>
+.my-process {
+  <span class="p">start-with</span>: content, not layout;
+  <span class="p">build</span>: responsive-first;
+  <span class="p">learning</span>: never-paused;
+}</code></pre>
+  </section>
+
+  
+<!-- ================= EDUCATION ================= -->
+
+  <section data-tab="02 · Education" data-footnote="² Four steps so far — the fourth one is still being written.">
+    <header class="ch"><p class="ch-no">Chapter 02</p><h2>My Education</h2><p class="ch-sub">the academic journey, step by step</p></header>
+    <div class="prose"><p>The path that helped me build technical and development skills — from school curiosity to writing real code.²</p></div>
+    <ol class="timeline">
+      <li><p class="step">Step 01</p><h3>Secondary School</h3><p>Completed basic schooling and developed interest in technology.</p></li>
+      <li><p class="step">Step 02</p><h3>Senior Secondary</h3><p>Focused on Computer Science and analytical learning.</p></li>
+      <li><p class="step">Step 03</p><h3>BCA</h3><p>Pursuing Bachelor of Computer Applications from Maa Bharti P.G. College.</p></li>
+      <li><p class="step">Step 04</p><h3>Frontend Development</h3><p>Learning HTML, CSS, JavaScript and building modern websites.</p></li>
+    </ol>
+  </section>
+
+  
+<!-- ================= PROJECTS ================= -->
+
+  <section data-tab="03 · Projects" data-footnote="³ Every project here began as a problem I wanted to solve for myself.">
+    <header class="ch"><p class="ch-no">Chapter 03</p><h2>My Projects</h2><p class="ch-sub">selected pages from the project log</p></header>
+    <ul class="entries">
+      <li><p class="meta">01 · management</p><h3>BGMI Management System</h3><p>Tournament, teams and players management system.</p></li>
+  
+      <li><p class="meta">02 · javascript</p><h3>Quiz Game</h3><p>Interactive quiz application with a scoring system.</p></li>
+    
+      <li><p class="meta">03 · javascript</p><h3>Number Guess Game</h3><p>Random number guessing game with attempts tracking.</p></li>
+      
+      <li><p class="meta">04 · python</p><h3>Toy Store Management</h3><p>Inventory and sales management project.</p></li>
+      
+    </ul>
+    <p class="hand">for-plus built so far — these four taught the most³</p>
+  </section>
+
+
+<!-- ================= SKILLS ================= -->
+
+  <section data-tab="04 · SKILLS" data-footnote="⁴ Skills improve when theory meets consistent practice.">
+    <header class="ch"><p class="ch-no">Chapter 04</p><h2>My Skills</h2><p class="ch-sub">the tools of the trade</p></header>
+    <div class="skills-notes">
+
+    <div class="skill-note">
+        <p class="skill-meta">01 · markup</p>
+        <h3>HTML</h3>
+        <p>Building semantic, accessible and responsive page structures.</p>
+    </div>
+
+    <div class="skill-note">
+        <p class="skill-meta">02 · styling</p>
+        <h3>CSS</h3>
+        <p>Creating modern layouts, animations and visual experiences.</p>
+    </div>
+
+    <div class="skill-note">
+        <p class="skill-meta">03 · scripting</p>
+        <h3>JavaScript</h3>
+        <p>Adding interactivity, logic and dynamic user experiences.</p>
+    </div>
+
+    <div class="skill-note">
+        <p class="skill-meta">04 · programming</p>
+        <h3>Python</h3>
+        <p>Problem solving, automation and application development.</p>
+    </div>
+
+
+  </section>
+
+<!-- ================= HOBBIES ================= -->
+
+  <section data-tab="05 · Hobbies" data-footnote="⁵ The margins of the notebook, where the fun is kept.">
+    <header class="ch"><p class="ch-no">Chapter 05</p><h2>My Hobbies</h2><p class="ch-sub">notes from the margins</p></header>
+    <div class="grid2 underlined">
+      <div><h3>💻 Coding</h3><p>Building websites, exploring new technologies and creating creative user interfaces.</p></div>
+      <div><h3>📚 Learning</h3><p>Continuously learning programming, software development and modern tools.</p></div>
+      <div><h3>🎮 Gaming</h3><p>Strategy and action games — good practice for problem solving.</p></div>
+      <div><h3>🎵 Music</h3><p>Music helps me stay focused, motivated and creative.</p></div>
+    </div>
+    <p class="hand">hobbies are research with a nicer name⁵</p>
+  </section>
+
+  
+<!-- ================= NOTES ================= -->
+
+  <section data-tab="06 · Notes" data-footnote="⁶ Every entry here was once a mistake with my name on it.">
+    <header class="ch"><p class="ch-no">Chapter 06</p><h2>Important Notes</h2><p class="ch-sub">things learned in the margins</p></header>
+    <div class="prose"><p>The notes I would write in the margin of my own work, if I were reading it back as someone else.⁶</p></div>
+    <pre class="note"><code><span class="c">/* important */</span>
+.important-notes {
+  <span class="p">naming</span>: half the architecture;
+  <span class="p">responsive</span>: not an afterthought;
+  <span class="p">accessibility</span>: not a phase-two item;
+  <span class="p">motion-duration</span>: under 400ms, always;
+}</code></pre>
+    <div class="prose"><p>Short, because deadlines. Honest, because the browser always tells the truth.</p></div>
+  </section>
+
+<!-- ================= CONTACT ================= -->
+
+  <section data-tab="07 · Contact" data-footnote="⁷ Replies usually arrive within a day, occasionally with a footnote.">
+    <header class="ch"><p class="ch-no">Chapter 07</p><h2>Contact Me</h2><p class="ch-sub">the address page at the back</p></header>
+    <div class="prose"><p>Writing is welcome — about work, an internship, a project that needs a second pair of eyes, or something worth learning.⁷</p></div>
+    </ul>
+    <ul class="contact">
+
+<li>
+    <span>📧 Email</span>
+    <a href="#">lokendra@example.com</a>
+</li>
+
+<li>
+    <span>📱 Phone</span>
+    <a href="#">+91 9876543210</a>
+</li>
+
+<li>
+    <span>💻 GitHub</span>
+    <a href="#">github.com/lokendra</a>
+</li>
+
+<li>
+    <span>🔗 LinkedIn</span>
+    <a href="#">linkedin.com/in/lokendra</a>
+</li>
+
+</ul>
+    <pre class="note"><code><span class="c">/* before-you-write */</span>
+.good-brief {
+  <span class="p">include</span>: the problem, not the solution;
+  <span class="p">timeline</span>: honest;
+}</code></pre>
+
+
+  </section>
+
+  
+<!-- ================= FOOTER ================= -->
+
+  <section data-tab="BEGINS" data-footnote="© 2026 Lokendra. All rights reserved.">
+    <div class="end">
+      <p class="kicker rise">fin</p>
+      <h2 class="rise" style="animation-delay:120ms">continued</h2>
+      <p class="rise" style="animation-delay:240ms"> — "Success is not final, failure is not fatal: it is the courage to continue that counts." — Winston Churchill</p>
+      <div class="rule rise" style="animation-delay:360ms"></div>
+    </div>
+  </section>
+
+</template>
+
+<script src="n33.js"></script>
+<audio id="flipSound" preload="auto">
+    <source src="C:\Users\loken\Downloads\page flip sound.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
+
